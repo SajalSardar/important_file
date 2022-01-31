@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="file_input" />
+    <img src="logo.png" alt="" id="show_img" width="200" />
+
+    <script>
+      let imgf = document.getElementById("file_input");
+      let output = document.getElementById("show_img");
+      imgf.addEventListener("change", function () {
+        output.src = imgf.files[0]["name"];
+      });
+    </script>
+  </body>
+</html>
